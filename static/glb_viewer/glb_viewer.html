@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>SMPL-X Sequences</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="glb_viewer.css" />
+</head>
+
+<body>
+
+  <div class="info-bar">
+    <span class="label">Sequence</span>
+    <span class="value" id="seq-label">01</span>
+  </div>
+
+  <div id="loader">
+    <div class="loader-title">Loading</div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="prog"></div>
+    </div>
+    <div class="loader-sub" id="loader-sub">Sequence 1&hellip;</div>
+  </div>
+
+  <div id="app"></div>
+
+  <div id="nav-hint" aria-hidden="true">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <!-- Vertical arrow -->
+      <line x1="50" y1="22" x2="50" y2="88" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+      <polyline points="43,32 50,21 57,32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"
+        stroke-linecap="round" />
+      <polyline points="43,78 50,89 57,78" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"
+        stroke-linecap="round" />
+      <!-- Curved horizontal arrow -->
+      <path d="M 17,50 Q 50,67 83,50" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+      <polyline points="-8,-6 0,0 -8,6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"
+        stroke-linecap="round" transform="translate(17,50) rotate(207)" />
+      <polyline points="-8,-6 0,0 -8,6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"
+        stroke-linecap="round" transform="translate(83,50) rotate(-27)" />
+    </svg>
+  </div>
+
+  <div class="controls">
+    <div class="seq-picker">
+      <button class="seq-btn active" data-seq="1">Seq. 1</button>
+      <button class="seq-btn" data-seq="2">Seq. 2</button>
+      <button class="seq-btn" data-seq="3">Seq. 3</button>
+    </div>
+    <div class="timeline">
+      <button class="play-btn" id="play-btn" title="Lecture / Pause">
+        <svg id="play-icon" viewBox="0 0 10 12">
+          <polygon points="0,0 10,6 0,12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <canvas id="gif-canvas" style="display:none"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/gifler@0.1.0/gifler.min.js"></script>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three":         "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <script type="module" src="viewer.js"></script>
+
+</body>
+
+</html>

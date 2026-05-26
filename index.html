@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Towards in-the-wild Human Motion Understanding: Xmopipe, a Large-Scale Dataset.">
+  <meta name="keywords" content="Human Motion, In-the-wild, Dataset">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Towards in-the-wild Human Motion Understanding: XmoPipe, a Large-Scale Dataset.</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/test.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://natsalaz.github.io/xmopipe">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://natsalaz.github.io/xmopipe">
+              XmoPipe
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Towards in-the-wild Human Motion Understanding: Xmopipe, a
+              Large-Scale
+              Dataset.</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://github.com/NatSalaz">Nathan Salazar</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="http://perso.ec-lyon.fr/emmanuel.dellandrea/">Emmanuel Dellandréa</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://perso.liris.cnrs.fr/mathieu.lefort/index.php">Mathieu Lefort</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://alexandre.meyer.pages.univ-lyon1.fr/www/">Alexandre Meyer</a><sup>1</sup>,
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>LIRIS - Laboratoire d'InfoRmatique en Image et Systèmes
+                d'information</span>
+              <span class="author-block"><sup>2</sup>IRISA - Institut de Recherche en Informatique et Systèmes
+                Aléatoires</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2011.12948" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2011.12948" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/natsalaz/xmopipe"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://drive.google.com/drive/folders/1Tp9QsLZAoFEckvSTPw1VTI6ynk2UgFit?usp=sharing"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/teaser.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">Xmopipe</span> can help create any motion dataset idea.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!--
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/steve.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-chair-tp">
+            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/chair-tp.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-shiba">
+            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/shiba.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-fullbody">
+            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/fullbody.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-blueshirt">
+            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/blueshirt.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-mask">
+            <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mask.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-coffee">
+            <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/coffee.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/toby2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Large-scale human motion datasets are essential for training robust models for analysis, synthesis, and
+              understanding.
+              While marker-based motion capture provides precise data, it is costly and limited in scale and diversity.
+              Recent
+              advances in monocular motion capture and video-language understanding make it possible to extract motion
+              from
+              unconstrained online videos.
+            </p>
+            <p>
+
+              We present a scalable pipeline for constructing in-the-wild human motion datasets. From a few keywords,
+              the
+              system retrieves relevant videos, extracts 3D body and facial motion, and generates high-level textual
+              descriptions. The
+              pipeline is flexible, enabling targeted collection of sports, multi-person interactions, or expressive
+              behaviors.
+              The resulting dataset is large, diverse, and multi-person. We demonstrate its quality by training motion
+              models, showing
+              performance comparable to traditional motion capture datasets and strong cross-dataset generalization.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Overview image. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Overview</h2>
+          <img src="./static/images/overview.svg" alt="Pipeline overview" style="width: 100%;">
+        </div>
+      </div>
+      <!--/ Overview image. -->
+
+      <!-- Paper video. -->
+      <div id="video" class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <video controls playsinline width="100%">
+              <source src="./static/videos/overview.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      <!--/ Paper video. -->
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!--/ Matting. -->
+
+      <!-- Animation. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Animation</h2>
+
+          <!-- SMPL Viewer. -->
+          <h3 class="title is-4">SMPL Sequences</h3>
+          <div class="content has-text-justified">
+            <p>
+              Interactive 3D viewer of SMPL body sequences extracted by the pipeline.
+              Use the sequence buttons to switch between examples, and drag to orbit the camera.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <iframe src="./static/glb_viewer/glb_viewer.html" width="100%" height="540"
+              style="border: none; border-radius: 8px; display: block;" allow="autoplay" allowfullscreen>
+            </iframe>
+          </div>
+          <br />
+          <!--/ SMPL Viewer. -->
+
+        </div>
+      </div>
+      <!--/ Animation. -->
+
+
+      <!-- Related Work. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Related Work</h2>
+
+          <div class="content has-text-justified">
+            <p>
+              XmoPipe builds on top of several outstanding open-source projects — we encourage you to explore their
+              work:
+            </p>
+            <p>
+              <strong>Core components:</strong>
+              <a href="https://github.com/zju3dv/GVHMR" target="_blank">GVHMR</a> for world-grounded human motion
+              recovery,
+              <a href="https://github.com/georgeretsi/smirk" target="_blank">SMIRK</a> for 3D facial expression
+              reconstruction,
+              <a href="https://github.com/QwenLM/Qwen3-VL" target="_blank">Qwen3-VL</a> for semantic information
+              extraction, and
+              <a href="https://github.com/vchoutas/smplx" target="_blank">SMPL-X</a> for the body model.
+            </p>
+            <p>
+              <strong>Worth checking out:</strong>
+              <a href="https://github.com/GuyTevet/motion-diffusion-model" target="_blank">MDM</a> by Guy Tevet et al.
+              is a strong motion diffusion baseline;
+              <a href="https://github.com/EricGuo5513/HumanML3D" target="_blank">HumanML3D</a> remains a key reference
+              dataset for text-driven motion.
+            </p>
+            <p>
+              <strong>Related projects:</strong>
+              <a href="https://vankouf.github.io/MotionMillion/" target="_blank">MotionMillion</a>;
+              <a href="https://github.com/MotrixLab/ViMoGen" target="_blank">ViMoGen</a>;
+              <a href="https://www.meta.com/emerging-tech/codec-avatars/embody-3d/" target="_blank">Meta Embody 3D</a>
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Related Work. -->
+
+    </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <p>If you use XmoPipe or build upon our pipeline, please cite the core upstream works: SMIRK, GVHMR & Qwen3-VL
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              Website source code based on the <a href="https://https://nerfies.github.io/">Nerfies</a> project page. If
+              you want to reuse their <a href="https://github.com/nerfies/nerfies.github.io">Source
+                code</a>, please
+              credit them
+              appropriately.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
