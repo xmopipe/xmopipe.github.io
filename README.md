@@ -5,7 +5,7 @@ This repository is the webpage presenting XmoPipe: A Pipeline for Large-Scale In
 Motion Dataset Construction - Accepted at CASAXR 2026
 
 Code github is available `https://github.com/NatSalaz/xmopipe`
-You can click on [this link](https://xmopipe/xmopipe.github.io) to go to the real website [TO TEST]
+You can click on [this link](https://xmopipe.github.io) to go to the real website [TO TEST]
 
 WebGL must be availabe to test the SMPLX scene section accurately.
 If you want to launch this code in a local setup, you can launch the website via 
